@@ -58,7 +58,7 @@ resetBtn.addEventListener("click" , function(){
     hour = 0;
     second = 0;
     minute = 0;
-    hourString.textContent = "00";
-    minuteString.textContent = "00";
-    secondString.textContent = "00";
+    hourDiv.textContent = "00";
+    minuteDiv.textContent = "00";
+    secondDiv.textContent = "00";
 })
