@@ -1,0 +1,105 @@
+/* Resetting default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Setting a container for the entire view */
+.container {
+    height: 100vh;
+    width: 100%;
+    background-color: #F0F0F0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Watch container - centralizing the clock */
+.watch {
+    height: 400px;
+    width: 70%;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #F92672;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Wrapper for time elements */
+.time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styling for hour, minute, and second elements */
+.hour, .minute, .second {
+    font-size: 100px;
+    height: 100px;
+    width: 80px;
+    color: #F92672;
+    margin: 0 20px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Styling for the separator between time units (div-seperate) */
+.div-seperate {
+    display: flex;
+    flex-direction: column; /* Stacks the divs vertically */
+    justify-content: center;
+    align-items: center;
+    height: 30px; 
+    width: 30px;   
+    background-color: #F92672;
+    border-radius: 50%;
+    margin: 0 20px;  
+}
+
+/* Buttons container - placed below the clock */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Styling for each button */
+.start, .stop, .reset {
+    width: 180px;
+    height: 80px;
+    border-radius: 50px;
+    border: none;
+    background-color: #F92672;
+    color: white;
+    font-size: 32px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+/* Button hover effects */
+.start:hover, .stop:hover, .reset:hover {
+    background-color: #e02460;
+    transform: translateY(-4px);
+}
+
+/* Button active (pressed) effect */
+.start:active, .stop:active, .reset:active {
+    transform: translateY(2px);
+}
+
+/* For ensuring smooth transition on clock changes */
+.watch {
+    transition: transform 0.3s ease;
+}
